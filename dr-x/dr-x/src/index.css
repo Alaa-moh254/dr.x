@@ -1,0 +1,15 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{--ink:#050506;--bone:#ecebe6;--steel:#9aa6b8}
+html{background:var(--ink);scroll-behavior:auto}
+body{margin:0;font-family:'Manrope',sans-serif;color:var(--bone);background:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--bone);color:var(--ink)}
+:focus-visible{outline:2px solid var(--steel);outline-offset:4px}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.huge{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.9}
+.mask{overflow:hidden;display:block}
+.glass{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.ulink{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s cubic-bezier(.2,.8,.2,1)}
+.ulink:hover,.ulink:focus-visible{background-size:100% 1px}
+@media (hover:hover) and (pointer:fine){body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
